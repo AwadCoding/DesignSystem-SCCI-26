@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System Showcase</title>
+    <link rel="stylesheet" href="root.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <style>
+        body {
+            padding: 4rem;
+        }
+        .showcase-section {
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 2rem;
+        }
+        .color-card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            background: white;
+        }
+        .color-preview {
+            height: 100px;
+            width: 100%;
+        }
+        .color-info {
+            padding: 1rem;
+            font-size: 1.2rem;
+        }
+        .component-row {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header style="text-align: center; margin-bottom: 4rem;">
+            <h1>Design System</h1>
+            <p class="text-muted">Visual verification of root.css tokens and components</p>
+        </header>
+
+        <!-- COLORS -->
+        <section class="showcase-section">
+            <h2>Colors</h2>
+            <h3>Primary (Red)</h3>
+            <div class="color-grid" style="margin-bottom: 2rem;">
+                <div class="color-card"><div class="color-preview" style="background: var(--color-primary-dark)"></div><div class="color-info">Primary Dark</div></div>
+                <div class="color-card"><div class="color-preview" style="background: var(--color-primary)"></div><div class="color-info">Primary</div></div>
+                <div class="color-card"><div class="color-preview" style="background: var(--color-primary-light)"></div><div class="color-info">Primary Light</div></div>
+                <div class="color-card"><div class="color-preview" style="background: var(--color-primary-lighter)"></div><div class="color-info">Primary Lighter</div></div>
+                <div class="color-card"><div class="color-preview" style="background: var(--color-primary-very-light)"></div><div class="color-info">Primary Very Light</div></div>
+            </div>
+<hr>
+<hr><hr>
+            <h3>Secondary (Blue)</h3>
+            <div class="color-grid" style="margin-bottom: 2rem;">
+                <div class="color-card"><div class="color-preview" style="background: var(--color-secondary-dark)"></div><div class="color-info">Secondary Dark</div></div>
+                <div class="color-card"><div class="color-preview" style="background: var(--color-secondary)"></div><div class="color-info">Secondary</div></div>
+                <div class="color-card"><div class="color-preview" style="background: var(--color-secondary-light)"></div><div class="color-info">Secondary Light</div></div>
+            </div>
+
+            <h3>Neutrals</h3>
+            <div class="color-grid">
+                <div class="color-card"><div class="color-preview" style="background: var(--color-black)"></div><div class="color-info">Black</div></div>
+                <div class="color-card"><div class="color-preview" style="background: var(--color-gray-dark)"></div><div class="color-info">Gray Dark</div></div>
+                <div class="color-card"><div class="color-preview" style="background: var(--color-gray-medium)"></div><div class="color-info">Gray Medium</div></div>
+                <div class="color-card"><div class="color-preview" style="background: var(--color-gray-light)"></div><div class="color-info">Gray Light</div></div>
+                <div class="color-card"><div class="color-preview" style="background: var(--color-white-neutral)"></div><div class="color-info">White Neutral</div></div>
+            </div>
+        </section>
+
+        <!-- TYPOGRAPHY -->
+        <section class="showcase-section">
+            <h2>Typography</h2>
+            <h1>Heading 1 - The quick brown fox</h1>
+            <h2>Heading 2 - The quick brown fox</h2>
+            <h3>Heading 3 - The quick brown fox</h3>
+            <h4>Heading 4 - The quick brown fox</h4>
+            <h5>Heading 5 - The quick brown fox</h5>
+            <h6>Heading 6 - The quick brown fox</h6>
+            <p><strong>Body Text:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <span class="text-primary">Text Primary</span> | <span class="text-secondary">Text Secondary</span> | <span class="text-muted">Text Muted</span></p>
+        </section>
+
+        <!-- BUTTONS -->
+        <section class="showcase-section">
+            <h2>Buttons</h2>
+            <div class="component-row">
+                <button class="btn btn-primary">Primary Button</button>
+                <button class="btn btn-secondary">Secondary Button</button>
+                <button class="btn btn-outline">Outline Button</button>
+                <button class="btn btn-soft">Soft Button</button>
+            </div>
+            <div class="component-row" style="background: #222; padding: 2rem; border-radius: 10px;">
+                <button class="btn btn-primary">On Dark</button>
+                <button class="btn btn-secondary">On Dark</button>
+                <button class="btn btn-outline">On Dark</button>
+            </div>
+        </section>
+
+        <!-- CARDS -->
+        <section class="showcase-section">
+            <h2>Cards</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Card Header</h3>
+                    </div>
+                    <p>This is a standard card component. It has padding, rounded corners, and a subtle shadow.</p>
+                    <button class="btn btn-primary">Action</button>
+                </div>
+                <div class="card">
+                    <h3>Simple Card</h3>
+                    <p>Card without a header section.</p>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+                <div class="card">
+                     <div class="card-header">
+                        <h3>Featured</h3>
+                    </div>
+                    <p>Test with some more content to see how it aligns.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
